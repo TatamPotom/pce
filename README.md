@@ -2,7 +2,7 @@
 
 PCE.js runs classic computers in the browser. It's a port of Hampa Hug's excellent [PCE](http://www.hampa.ch/pce/) emulator, put together by [James Friend](https://jamesfriend.com.au/).
 
-PCE.js currently emulates Mac Plus, IBM PC/XT and Atari ST functionally in recent versions of Chrome and Firefox.
+PCE.js currently emulates Mac Plus, Lisa, IBM PC/XT and Atari ST functionally in recent versions of Chrome and Firefox.
 
 More info: 
 
