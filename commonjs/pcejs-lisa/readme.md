@@ -1,5 +1,5 @@
-### pcejs-macplus
-an apple emulator for the browser
+### pcejs-lisa
+an apple lisa emulator for the browser
 
 #### getting started
 given a commonjs module
@@ -8,22 +8,22 @@ npm init
 ```
 install dependencies
 ```bash
-npm install --save pcejs-macplus pcejs-util
+npm install --save pcejs-lisa pcejs-util
 ```
 
 add some js `index.js`
 ```js
-var macplus = require('pcejs-macplus')
+var lisa = require('pcejs-lisa')
 var utils = require('pcejs-util')
 
 // add a loading progress bar. not required, but good ux
 var loadingStatus = utils.loadingStatus(document.querySelector('.pcejs-loading-status'))
 
-macplus({
+lisa({
   'arguments': ['-c','pce-config.cfg','-r'],
   autoloadFiles: [
-    'macplus-pcex.rom',
-    'mac-plus.rom',
+    'lisa-pcex.rom',
+    'lisa.rom',
     'hd1.qed',
     'pce-config.cfg',
   ],
@@ -52,7 +52,7 @@ add some html `index.html`
       padding: 0;
     }
     .pcejs-container { margin-top: 32px }
-    /* macplus has mouse integration, so we can hide the host mouse */
+    /* lisa has mouse integration, so we can hide the host mouse */
     .pcejs-canvas { cursor: none }
     </style>
   </head>
@@ -70,20 +70,20 @@ add some html `index.html`
 
 add some files
 ```bash
-curl -O https://jamesfriend.com.au/pce-js/dist/macplus-system.zip
-unzip macplus-system.zip
+curl -O https://jamesfriend.com.au/pce-js/dist/lisa-system.zip
+unzip lisa-system.zip
 ```
 
 grab the extension rom file from the npm package
 ```bash
-cp node_modules/pcejs-macplus/macplus-pcex.rom ./macplus-pcex.rom
+cp node_modules/pcejs-lisa/lisa-pcex.rom ./lisa-pcex.rom
 ```
 
 bundle it with browserify
 ```bash
 npm install -g browserify@4.x
 browserify index.js \
-  --noparse="node_modules/pcejs-macplus/lib/pcejs-macplus.js" \
+  --noparse="node_modules/pcejs-lisa/lib/pcejs-lisa.js" \
   > bundle.js
 ```
 
