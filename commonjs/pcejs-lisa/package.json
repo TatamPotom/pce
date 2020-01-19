@@ -1,0 +1,33 @@
+{
+  "name": "pcejs-macplus",
+  "description": "Apple Lisa emulator for the browser",
+  "keywords": [
+    "emulator",
+    "browserify"
+  ],
+  "author": "",
+  "version": "0.1.0",
+  "dependencies": {
+    "xtend": "^3.0.0"
+  },
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "https://raw.github.com/jsdf/pce/master/COPYING"
+    }
+  ],
+  "scripts": {
+    "prepublish": "./prepublish.sh lisa"
+  },
+  "files": [
+    "index.js",
+    "lisa-pcex.rom",
+    "lib/pcejs-lisa.js"
+  ],
+  "homepage": "https://github.com/jsdf/pce",
+  "bugs": "https://github.com/jsdf/pce/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jsdf/pce.git"
+  }
+}
